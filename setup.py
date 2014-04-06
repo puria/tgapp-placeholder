@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+import sys, os
+
+try:
+    from setuptools import setup, find_packages
+except ImportError:
+    from ez_setup import use_setuptools
+    use_setuptools()
+    from setuptools import setup, find_packages
+
+install_requires=[
+    "TurboGears2 >= 2.1.4",
+    "tgext.pluggable"
+]
+
+here = os.path.abspath(os.path.dirname(__file__))
+try:
+    README = open(os.path.join(here, 'README.rst')).read()
+except IOError:
+    README = ''
+
+setup(
+    name='placeholder',
+    version='0.9',
+    description='Placeholder image on the fly for Turbogears2',
+    long_description=README,
+    author='Puria Nafisi Azizi',
+    author_email='puria.nafisi@axant.it',
+    #url='',
+    license='WTFPL'
+    keywords='turbogears2.application placeholder dummy image',
+    packages=find_packages(exclude=['ez_setup']),
+    install_requires=install_requires,
+    include_package_data=True,
+    package_data={'tgapp.placeholder': ['i18n/*/LC_MESSAGES/*.mo', 'templates/*/*', 'public/*/*']},
+    entry_points="""
+    """,
+    zip_safe=False
+)
