@@ -21,7 +21,7 @@ except IOError:
     README = ''
 
 setup(
-    name='placeholder',
+    name='tgapp-placeholder',
     version='0.9',
     description='Placeholder image on the fly for Turbogears2',
     long_description=README,
