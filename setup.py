@@ -10,7 +10,8 @@ except ImportError:
 
 install_requires=[
     "TurboGears2 >= 2.1.4",
-    "tgext.pluggable"
+    "tgext.pluggable",
+    "pillow"
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -27,7 +28,7 @@ setup(
     author='Puria Nafisi Azizi',
     author_email='puria.nafisi@axant.it',
     #url='',
-    license='WTFPL'
+    license='WTFPL',
     keywords='turbogears2.application placeholder dummy image',
     packages=find_packages(exclude=['ez_setup']),
     install_requires=install_requires,

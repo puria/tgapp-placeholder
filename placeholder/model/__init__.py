@@ -7,6 +7,3 @@ DeclarativeBase = declarative_base()
 
 def init_model(app_session):
     DBSession.configure(app_session)
-
-from .models import Sample
-
