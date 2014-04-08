@@ -27,7 +27,7 @@ setup(
     long_description=README,
     author='Puria Nafisi Azizi',
     author_email='puria.nafisi@axant.it',
-    #url='',
+    url='http://github.com/puria/tgapp-placeholder',
     license='WTFPL',
     keywords='turbogears2.application placeholder dummy image',
     packages=find_packages(exclude=['ez_setup']),
