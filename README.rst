@@ -27,23 +27,16 @@ Then at the *end of the file* call plug with placeholder::
 You will be able to access the plugged application at
 *http://localhost:8080/placeholder*.
 
-Available Hooks
-----------------------
+Using placeholder
+-----------------
 
-placeholder makes available a some hooks which will be
-called during some actions to alter the default
-behavior of the appplications:
+You are now able to get your fake images by calling::
 
-Exposed Partials
-----------------------
+  http://you-application/placeholder/{width} #for a square image
+  http://you-application/placeholder/{width}x{height}
+  http://you-application/placeholder/{width}x{height}?text={some text value}
 
-placeholder exposes a bunch of partials which can be used
-to render pieces of the blogging system anywhere in your
-application:
-
-Exposed Templates
---------------------
-
-The templates used by registration and that can be replaced with
-*tgext.pluggable.replace_template* are:
-
+actually the parameters you can play are:
+    * `text` : a custom online text wich size is calculated to fit your image width
+    * `bgcolor` : the background color in HEX rgb form (default set to 'DDDDDD')
+    * `color` : the text color in HEX rgb form (default set to '888888')
