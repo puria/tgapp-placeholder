@@ -36,7 +36,9 @@ You are now able to get your fake images by calling::
   http://you-application/placeholder/{width}x{height}
   http://you-application/placeholder/{width}x{height}?text={some text value}
 
-actually the parameters you can play are:
+actually the parameters you can play with are:
     * `text` : a custom online text wich size is calculated to fit your image width
     * `bgcolor` : the background color in HEX rgb form (default set to 'DDDDDD')
     * `color` : the text color in HEX rgb form (default set to '888888')
+    * `format` : available formats available `here <http://pillow.readthedocs.org/en/latest/handbook/image-file-formats.html>` (default set to PNG)
+    * `font_size` : font_size of the eventtual text. If none is provided it is automagically calculated to fit the whole text in the image width.
