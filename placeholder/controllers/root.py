@@ -17,9 +17,16 @@ import StringIO
 from collections import namedtuple
 import os
 
+import cStringIO
+
+import requests
+import tg
+
 from PIL import ImageFont
+from io import BytesIO
 from tg import TGController, expose
 from PIL import Image, ImageDraw, ImageColor
+import urllib
 
 
 FONT_PATH = os.path.join(os.path.dirname(__file__), '..', 'public', 'Marlboro.ttf')
@@ -78,3 +85,30 @@ class RootController(TGController):
             except ValueError:
                 color = ImageColor.getrgb('#888')
         return bgcolor, color
+
+    @expose(content_type="image/png")
+    def stevenseagal(self, size):
+        return self._get_hero_image('http://www.stevensegallery.com', size)
+
+    @expose(content_type="image/png")
+    def nicolascage(self, mode='', size='200x200'):
+        if mode not in ['c', 'g', 'gif']:
+            size = mode
+            mode = None
+        base = 'http://www.placecage.com/'
+        if mode:
+            base += '%s/' % mode
+        return self._get_hero_image(base, size)
+
+    @expose(content_type="image/png")
+    def billmurray(self, size):
+        return self._get_hero_image('http://www.fillmurray.com', size)
+
+    def _get_hero_image(self, url, size):
+        size = self._parse_size(size)
+        response = requests.get('%s/%s/%s' % (url, size.width, size.height))
+        img = Image.open(BytesIO(response.content))
+
+        fp = StringIO.StringIO()
+        img.save(fp, 'PNG')
+        return fp.getvalue()

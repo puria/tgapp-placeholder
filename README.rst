@@ -42,3 +42,33 @@ actually the parameters you can play with are:
     * `color` : the text color in HEX rgb form (default set to '888888')
     * `format` : available formats available `here <http://pillow.readthedocs.org/en/latest/handbook/image-file-formats.html>` (default set to PNG)
     * `font_size` : font_size of the eventtual text. If none is provided it is automagically calculated to fit the whole text in the image width.
+
+NEW
+---
+
+Your movie stars by placeholder! Now you can generate custom-size placeholder images of Bill Murray, Steven Seagal and the
+greatest artist of all times Nicolas Cage!
+
+Just add the name of you movie hero in the URL, like::
+
+  http://you-application/placeholder/stevenseagal/{width} #for a square image
+  http://you-application/placeholder/nicolascage/{width}x{height}
+  http://you-application/placeholder/billmurray/{width}x{height}
+
+No text, bgcolor, color, format or font size needed! Just the name of an hero, and see the magic!
+
+EXTRA: Nicolas Cage
+*******************
+
+Nicolas The Great Cage images supports the gray or the gif mode. Just add the *mode* in your URL::
+
+  http://you-application/placeholder/nicolascage/g/{width}x{height}
+  http://you-application/placeholder/billmurray/gif/{width}x{height}
+
+Available modes:
+    * `g` : gray mode
+    * `gif`: gif mode
+    * `c`: Wanna see some crazy stuff? Try the crazy Cage mode!
+
+Based on famous placeholder generator by Dave Cowart (*http://www.placecage.com*,
+*http://www.stevenseagallery.com*, *http://www.fillmurray.com*)
