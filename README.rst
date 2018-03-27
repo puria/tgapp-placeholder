@@ -1,3 +1,7 @@
+.. image:: https://img.shields.io/pypi/v/tgapp-placeholder.svg   
+   :alt: PyPI   
+   :target: https://pypi.org/project/tgapp-placeholder/
+
 About placeholder
 -------------------------
 
