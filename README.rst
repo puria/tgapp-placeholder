@@ -1,11 +1,21 @@
++------------+------------+-----------+-----------+
+|     |ph|   |    |nc|    |   |pm|    |    |ss|   |
++------------+------------+-----------+-----------+
+
+
+.. |ph| image:: http://placehold.it/200
+.. |nc| image:: http://www.placecage.com/gif/200/200
+.. |pm| image:: http://www.fillmurray.com/200/200
+.. |ss| image:: https://www.stevensegallery.com/200/200
+   
 .. image:: https://img.shields.io/pypi/v/tgapp-placeholder.svg   
    :alt: PyPI   
    :target: https://pypi.org/project/tgapp-placeholder/
 
-About placeholder
+About tgapp-placeholder
 -------------------------
 
-tgapp-placeholder is a Pluggable application for TurboGears2 that allows placeholder images generation on the fly.
+**tgapp-placeholder** is a Pluggable application for `TurboGears2 <http://turbogears.org/>`_ that allows placeholder images generation on the fly.
 Inspired by http://dummyimage.com/ and https://github.com/darkrho/django-dummyimage.
 
 Installing
@@ -41,14 +51,15 @@ You are now able to get your fake images by calling::
   http://you-application/placeholder/{width}x{height}?text={some text value}
 
 actually the parameters you can play with are:
-    * `text` : a custom online text wich size is calculated to fit your image width
-    * `bgcolor` : the background color in HEX rgb form (default set to 'DDDDDD')
-    * `color` : the text color in HEX rgb form (default set to '888888')
-    * `format` : available formats available `here <http://pillow.readthedocs.org/en/latest/handbook/image-file-formats.html>` (default set to PNG)
-    * `font_size` : font_size of the eventtual text. If none is provided it is automagically calculated to fit the whole text in the image width.
+    * **text** : a custom online text wich size is calculated to fit your image width
+    * **bgcolor** : the background color in HEX rgb form (default set to 'DDDDDD')
+    * **color** : the text color in HEX rgb form (default set to '888888')
+    * **format** : available formats available `here <http://pillow.readthedocs.org/en/latest/handbook/image-file-formats.html>`_ (default set to PNG)
+    * **font_size** : font_size of the eventtual text. If none is provided it is automagically calculated to fit the whole text in the image width.
 
-NEW
----
+
+Moviestars
+----------
 
 Your movie stars by placeholder! Now you can generate custom-size placeholder images of Bill Murray, Steven Seagal and the
 greatest artist of all times Nicolas Cage!
@@ -70,9 +81,9 @@ Nicolas The Great Cage images supports the gray or the gif mode. Just add the *m
   http://you-application/placeholder/billmurray/gif/{width}x{height}
 
 Available modes:
-    * `g` : gray mode
-    * `gif`: gif mode
-    * `c`: Wanna see some crazy stuff? Try the crazy Cage mode!
+    * **g** : gray mode
+    * **gif**: gif mode
+    * **c**: Wanna see some crazy stuff? Try the crazy Cage mode!
 
 Based on famous placeholder generator by Dave Cowart (*http://www.placecage.com*,
-*http://www.stevenseagallery.com*, *http://www.fillmurray.com*)
+*https://www.stevensegallery.com/*, *http://www.fillmurray.com*)
