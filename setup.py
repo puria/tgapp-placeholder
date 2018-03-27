@@ -11,7 +11,20 @@ except ImportError:
 install_requires=[
     "TurboGears2 >= 2.1.4",
     "tgext.pluggable",
-    "pillow"
+    "pillow",
+    "requests"
+]
+
+testpkgs = [
+    'WebTest >= 1.2.3',
+    'nose',
+    'coverage',
+    'ming',
+    'sqlalchemy',
+    'zope.sqlalchemy',
+    'repoze.who',
+    'tw2.forms',
+    'kajiki',
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -22,7 +35,7 @@ except IOError:
 
 setup(
     name='tgapp-placeholder',
-    version='0.9.1',
+    version='1.0.0',
     description='Placeholder image on the fly for Turbogears2',
     long_description=README,
     author='Puria Nafisi Azizi',

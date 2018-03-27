@@ -13,12 +13,12 @@ http://www.wtfpl.net/ for more details.
 """
 
 
-import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 from collections import namedtuple
 import os
-
-import cStringIO
-
 import requests
 import tg
 
