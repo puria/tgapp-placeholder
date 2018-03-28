@@ -13,7 +13,7 @@ http://www.wtfpl.net/ for more details.
 """
 
 
-import StringIO
+from six import StringIO
 from collections import namedtuple
 import os
 
@@ -49,7 +49,7 @@ class RootController(TGController):
         text_center = (size.width / 2 - text_size[0] / 2,
                        size.height / 2 - text_size[1] / 2)
         draw.text(text_center, text.decode('utf-8'), fill=color, font=font)
-        fp = StringIO.StringIO()
+        fp = StringIO()
         image.save(fp, format)
 
         return fp.getvalue()

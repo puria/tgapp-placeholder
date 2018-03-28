@@ -12,6 +12,7 @@ install_requires=[
     "TurboGears2 >= 2.1.4",
     "tgext.pluggable",
     "pillow"
+    "six    "
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
