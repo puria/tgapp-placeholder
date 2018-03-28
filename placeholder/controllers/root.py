@@ -13,12 +13,9 @@ http://www.wtfpl.net/ for more details.
 """
 
 
-from six import StringIO
+from io import StringIO
 from collections import namedtuple
 import os
-
-import cStringIO
-
 import requests
 import tg
 
