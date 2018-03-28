@@ -106,6 +106,6 @@ class RootController(TGController):
         response = requests.get('%s/%s/%s' % (url, size.width, size.height))
         img = Image.open(BytesIO(response.content))
 
-        fp = StringIO.StringIO()
+        fp = StringIO()
         img.save(fp, 'PNG')
         return fp.getvalue()
