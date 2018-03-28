@@ -13,7 +13,7 @@ http://www.wtfpl.net/ for more details.
 """
 
 
-from io import StringIO
+from six import StringIO
 from collections import namedtuple
 import os
 import requests

@@ -12,7 +12,8 @@ install_requires=[
     "TurboGears2 >= 2.1.4",
     "tgext.pluggable",
     "pillow",
-    "requests"
+    "requests",
+    "six"
 ]
 
 testpkgs = [
