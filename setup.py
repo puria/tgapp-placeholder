@@ -36,7 +36,7 @@ except IOError:
 
 setup(
     name='tgapp-placeholder',
-    version='1.0.0',
+    version='1.0.1',
     description='Placeholder image on the fly for Turbogears2',
     long_description=README,
     author='Puria Nafisi Azizi',
